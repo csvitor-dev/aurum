@@ -11,5 +11,5 @@ interface AccountService
 {
     public function create(CreateAccountDto $dto): AccountResource;
 
-    public function getByUuid(string $uuid): ?AccountResource;
+    public function getByUuid(string $uuid): AccountResource;
 }

@@ -7,7 +7,6 @@ namespace App\Http\Controllers\Api\Account;
 use App\Http\Controllers\Controller;
 use App\Services\Contracts\AccountService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Response;
 
 final class GetAccountByIdController extends Controller
 {
@@ -20,10 +19,6 @@ final class GetAccountByIdController extends Controller
     {
         $resource = $this->service->getByUuid($uuid);
 
-        if (null === $resource) {
-            return response()
-                ->json(status: Response::HTTP_BAD_REQUEST);
-        }
         return response()
             ->json($resource);
     }
