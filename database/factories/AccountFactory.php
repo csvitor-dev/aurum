@@ -21,7 +21,7 @@ class AccountFactory extends Factory
         return [
             'uuid' => fake()->uuid(),
             'name' => fake()->name(),
-            'balance' => fake()->numberBetween(int2: 9999.99),
+            'balance' => 0.0,
         ];
     }
 }
