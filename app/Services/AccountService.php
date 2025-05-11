@@ -30,7 +30,7 @@ class AccountService implements AccountServiceContract
     {
         $model = $this->repository->findByUuid($uuid);
 
-        if (null !== $model) {
+        if (null === $model) {
             throw new ModelNotFoundException(Account::class);
         }
         return new AccountResource($model);
